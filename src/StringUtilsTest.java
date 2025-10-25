@@ -20,6 +20,14 @@ public class StringUtilsTest {
     }
 
     @Test
+    public void testReverseString3() {
+        String input = "hello";
+        String expected = "asdf";
+        String actual = StringUtils.reverseString(input);
+        assertNotEquals(expected, actual);
+    }
+
+    @Test
     public void testCapitalizeString1() {
         String input = "hello";
         String expected = "Hello";
@@ -33,6 +41,14 @@ public class StringUtilsTest {
         String expected = "HeLlO";
         String actual = StringUtils.capitalizeString(input);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCapitalizeString3() {
+        String input = "Hello";
+        String expected = "hello";
+        String actual = StringUtils.capitalizeString(input);
+        assertNotEquals(expected, actual);
     }
 
     @Test
@@ -51,5 +67,14 @@ public class StringUtilsTest {
         int expected = 0;
         int actual = StringUtils.countOccurrences(input, target);
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountOccurrences3() {
+        String input = "hello";
+        char target = 'h';
+        int expected = 0;
+        int actual = StringUtils.countOccurrences(input, target);
+        assertNotEquals(expected, actual);
     }
 }
